@@ -32,6 +32,7 @@ IMPORTANT:
 ----------
 
 This project makes use of these libraries listed:
+
 +  `allauth` for authentication.
 + `crispy_forms` for forms.
 + `ckeditor` for rich-text-editor. This means, you need to use `ckeditor_uploader` in your INSTALLED_APPS, and 
@@ -40,6 +41,7 @@ You need to define ``CKEDITOR_UPLOAD_PATH = 'ck-uploads/'``, ``CKEDITOR_IMAGE_BA
 + Media settings should be provided as well:
 urlpattern + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) MEDIA_ROOT and MEDIA_URL should be defined in settings.py.
 + For additional features in ckeditor, use this snippet in settings.py:
+
 ```
 # CKEDITOR
 CKEDITOR_CONFIGS = {
