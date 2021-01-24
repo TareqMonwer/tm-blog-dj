@@ -38,8 +38,10 @@ This project makes use of these libraries listed:
 + `ckeditor` for rich-text-editor. This means, you need to use `ckeditor_uploader` in your INSTALLED_APPS, and 
 include `ckeditor_uploader.urls` in you root `URLconf`.
 You need to define ``CKEDITOR_UPLOAD_PATH = 'ck-uploads/'``, ``CKEDITOR_IMAGE_BACKEND = "pillow"`` & ``CKEDITOR_ALLOW_NONIMAGE_FILES = False`` in your settings file as well.
+
 + Media settings should be provided as well:
 urlpattern + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) MEDIA_ROOT and MEDIA_URL should be defined in settings.py.
+
 + For additional features in ckeditor, use this snippet in settings.py:
 
 ```
