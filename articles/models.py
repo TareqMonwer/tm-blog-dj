@@ -59,4 +59,4 @@ class Like(TimeStampedModel):
     article = models.ForeignKey(Article, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f'{self.user} liked {self.article.title}'
+        return f'{self.user} liked this post'

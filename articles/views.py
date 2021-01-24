@@ -22,7 +22,10 @@ class ArticleList(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        last_article = Article.published.latest()
+        try:
+            last_article = Article.published.latest()
+        except Article.DoesNotExist:
+            last_article = None
         context['last_article'] = last_article
         return context
 

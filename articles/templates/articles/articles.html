@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'articles/base.html' %}
 
 {% block content %}
   <!-- Page Header -->
@@ -15,10 +15,16 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="site-heading">
+            {% if last_article %}
             <a href="{{ last_article.get_absolute_url }}" class="text-light">
               <h1>{{ last_article.title }}</h1>
               <span class="subheading">{{ last_article.short_description|safe }}</span>
             </a>
+            {% else %}
+              <h2>
+                No article has been published yet.
+              </h2>
+            {% endif %}
           </div>
         </div>
       </div>
@@ -74,10 +80,10 @@
   <hr>
 
   <!-- Fixed Action Buttons -->
-  {% include 'inc/_fixed_actions.html' %}
+  {% include 'articles/inc/_fixed_actions.html' %}
 
   <!-- Footer -->
-  {% include 'inc/_footer.html' %}
+  {% include 'articles/inc/_footer.html' %}
 
 {% endblock content %}
 
